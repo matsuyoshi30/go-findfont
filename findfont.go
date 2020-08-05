@@ -32,7 +32,7 @@ func List() (filePaths []string) {
 
 	walkF := func(path string, info os.FileInfo, err error) error {
 		if err == nil {
-			if info.IsDir() == false && strings.HasSuffix(strings.ToLower(path), ".ttf") {
+			if info.IsDir() == false && isFontFile(path) {
 				pathList = append(pathList, path)
 			}
 		}
@@ -43,6 +43,11 @@ func List() (filePaths []string) {
 	}
 
 	return pathList
+}
+
+func isFontFile(fileName string) bool {
+	lower := strings.ToLower(fileName)
+	return strings.HasSuffix(lower, ".ttf") || strings.HasSuffix(lower, ".ttc")
 }
 
 func stripExtension(fileName string) string {
@@ -77,7 +82,7 @@ func find(needle string) (filePath string, err error) {
 
 		lowerPath := strings.ToLower(info.Name())
 
-		if info.IsDir() == false && strings.HasSuffix(lowerPath, ".ttf") {
+		if info.IsDir() == false && isFontFile(lowerPath) {
 			lowerBase := stripExtension(lowerPath)
 			if lowerPath == lowerNeedle {
 				// exact match
