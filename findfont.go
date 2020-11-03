@@ -47,7 +47,7 @@ func List() (filePaths []string) {
 
 func isFontFile(fileName string) bool {
 	lower := strings.ToLower(fileName)
-	return strings.HasSuffix(lower, ".ttf") || strings.HasSuffix(lower, ".ttc")
+	return strings.HasSuffix(lower, ".ttf") || strings.HasSuffix(lower, ".ttc") || strings.HasSuffix(lower, ".otf")
 }
 
 func stripExtension(fileName string) string {
