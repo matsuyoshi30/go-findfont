@@ -1,4 +1,4 @@
-[![GoDoc](https://godoc.org/github.com/flopp/go-findfont?status.svg)](https://godoc.org/github.com/flopp/go-findfont)
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/flopp/go-findfont)](https://pkg.go.dev/github.com/flopp/go-findfont)
 [![Go Report Card](http://goreportcard.com/badge/flopp/go-findfont)](http://goreportcard.com/report/flopp/go-findfont)
 [![License MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](https://github.com/flopp/go-findfont/)
 
@@ -6,13 +6,13 @@
 A platform-agnostic go (golang) library to easily locate truetype font files in your system's user and system font directories.
 
 ## What?
-go-findfont is a golang library that allows you to locate font file on your system. The library is currently aware of the default font directories on Linux/Unix, Windows, and MacOS.
+`go-findfont` is a golang library that allows you to locate font file on your system. The library is currently aware of the default font directories on Linux/Unix, Windows, and MacOS.
 
 ## How?
 
 ### Installation
 
-Installing go-findfont is as easy as
+Installing `go-findfont` is as easy as
 
 ```bash
 go get -u github.com/flopp/go-findfont
